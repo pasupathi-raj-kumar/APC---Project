@@ -83,6 +83,14 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
         shift++;
     }
 
+    while ((*head)->data == 0 && (*head)->next != NULL)
+    {
+        Dlist *to_delete = *head;
+        *head = (*head)->next;
+        (*head)->prev = NULL;
+        free(to_delete);
+    }
+
     return SUCCESS;
 }
 

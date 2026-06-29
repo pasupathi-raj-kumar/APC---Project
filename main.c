@@ -112,6 +112,7 @@ int main(int argc, char *argv[])
             break;
         }
 
+        case '*' :
         case 'X' :
         {
           multiplication(&head1, &tail1, &head2, &tail2, &head, &tail);	
@@ -193,6 +194,7 @@ int main(int argc, char *argv[])
             return FAILURE;
         }
     }
-
+    printf("\n");
+    return SUCCESS;
 }
 
